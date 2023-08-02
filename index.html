@@ -9,51 +9,47 @@
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
   crossorigin="anonymous"></script>
   </head>
-  <body>
-    <form name="dentaku">
-      <table>
-        <tr>
-         <td colspan="4">
-           <input type ="text" class="display" name="display" value="">
-         </td>
-        </tr>
-        
-        <tr>
-          <td><input type="button" value="7" onclick="get_calc(this)"></td>
-          <td><input type="button" value="8" onclick="get_calc(this)"></td>
-          <td><input type="button" value="9" onclick="get_calc(this)"></td>
-          <td><input type="button" value="+" class="operator"onclick="get_calc(this)"></td>
-        </tr>
-        
-        <tr>
-          <td><input type="button" value="4" onclick="get_calc(this)"></td>
-          <td><input type="button" value="5" onclick="get_calc(this)"></td>
-          <td><input type="button" value="6" onclick="get_calc(this)"></td>
-          <td><input type="button" value="-" class="operator"onclick="get_calc(this)"></td>
-        </tr>
-        
-        <tr>
-          <td><input type="button" value="1" onclick="get_calc(this)"></td>
-          <td><input type="button" value="2" onclick="get_calc(this)"></td>
-          <td><input type="button" value="3" onclick="get_calc(this)"></td>
-          <td><input type="button" value="*" class="operator"onclick="get_calc(this)"></td>
-        </tr>
-        
-        <tr>
-          <td><input type="button" value="0" onclick="get_calc(this)"></td>
-          <td><input type="button" value="00" onclick="get_calc(this)"></td>
-          <td><input type="button" value="." onclick="get_calc(this)"></td>
-          <td><input type="button" value="/" class="operator"onclick="get_calc(this)"></td>
-        </tr>
-        
-        <tr>
-          <td><input type="button" value="AC" onclick="get_calc(this)"></td>
-          <td><input type="button" value="=" class="equal"onclick="get_calc(this)"></td>
-          
-        </tr>
-      </table>
-    </form>
+  　<body>
+    <div class = "container">
+<!--      計算結果を出力する場所-->
+      <div id = "output_total" class="output ">0</div>
+<!--      計算過程を出力する -->
+      <div id = "output_sub" class="output active">0</div>
+<!--      ボタンを配置する場所-->
+      <div class = 'input'>
+          <section class = 'row'>
+            <div id = "clear">C</div>
+            <div class = "num_bth"></div>
+            
+            <div class = "num_bth cal" data-index-id= '/'>÷</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 9 >9</div>
+            <div class = "num_bth one_nine " data-index-id = 8 >8</div>
+            <div class = "num_bth one_nine " data-index-id = 7 >7</div>
+            <div class = "num_bth cal" data-index-id = '*'>×</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 6 >6</div>
+            <div class = "num_bth one_nine " data-index-id = 5 >5</div>
+            <div class = "num_bth one_nine " data-index-id = 4 >4</div>
+            <div class = "num_bth cal" data-index-id = '-'>－</div>     
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth one_nine " data-index-id = 3 >3</div>
+            <div class = "num_bth  one_nine" data-index-id = 2 >2</div>
+            <div class = "num_bth  one_nine" data-index-id = 1 >1</div>
+            <div class = "num_bth cal" data-index-id = '+'>+</div>
+          </section>
+          <section class = 'row'>
+            <div class = "num_bth" id="zero" data-index-id = 0 >0</div>
+            <div class = "num_bth" id="point" data-index-id = . >.</div>
+            <div id = 'equal_btn'>=</div>       
+          </section>        
+      </div>
+    </div>
     <script type="text/javascript" src="main.js"charset="utf-8"></script>
   </body>
   
 </html>
+   
