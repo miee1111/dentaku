@@ -127,9 +127,12 @@
   }
 
  ;
-
+//桁数を揃える関数10桁を表示させる関数
+  function digitNum(num) {
+    return Math.round(num*100000000)/100000000;
+  }
+  
   //計算過程結果、計算結果画面の表示の切り替え
- 
   function changeOutput(){
     if(state==='finish'){
       output_total.classList.add('active');
